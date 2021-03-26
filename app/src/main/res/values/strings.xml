@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Our Recipe Book</string>
+    <string name="serves">Serves:</string>
+    <string name="time_taken">Time taken:</string>
+
+</resources>

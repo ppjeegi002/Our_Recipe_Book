@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/add_bg"
+        tools:context=".MainActivity2">
+
+
+        <TextView
+            android:id="@+id/holder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/box1"
+            android:fontFamily="@font/baloo_chettan"
+            android:paddingTop="15dp"
+            android:text="Add your recipe!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:background="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toTopOf="@+id/addimage"
+            app:layout_constraintEnd_toStartOf="@+id/addimage"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/holder"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/addimage"
+            android:layout_width="138dp"
+            android:layout_height="142dp"
+
+            android:layout_marginTop="76dp"
+            app:layout_constraintBottom_toTopOf="@+id/Title"
+            app:layout_constraintEnd_toEndOf="@+id/Title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Title"
+            app:layout_constraintTop_toTopOf="@+id/holder"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/add_image" />
+
+        <Button
+            android:id="@+id/buttonadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo_chettan"
+            android:text="Add Image"
+            android:backgroundTint="#2B0707"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/addimage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/addimage"
+            app:layout_constraintTop_toBottomOf="@+id/addimage"
+            app:layout_constraintVertical_bias="0.0"
+            android:onClick="btnaddImage"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo_chettan"
+            android:text="Submit"
+            android:backgroundTint="#2B0707"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Recipe"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/Recipe"
+            app:layout_constraintTop_toBottomOf="@+id/Recipe"
+            app:layout_constraintVertical_bias="0.356"
+            android:onClick="btnUploadRecipe"/>
+
+
+        <EditText
+            android:id="@+id/Title"
+            android:layout_width="344dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:hint="Recipe name:"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toTopOf="@+id/Serves"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.500"
+            app:layout_constraintStart_toStartOf="@+id/holder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/Recipe"
+            android:layout_width="344dp"
+            android:layout_height="213dp"
+            android:layout_marginTop="416dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:gravity="top|left"
+            android:maxLines="200"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:scrollbars="vertical"
+            android:text="STEPS:"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="@+id/Prep"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Prep"
+            app:layout_constraintTop_toBottomOf="@+id/Level" />
+
+        <EditText
+            android:id="@+id/Prep"
+            android:layout_width="344dp"
+            android:layout_height="120dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:gravity="top|left"
+            android:maxLines="200"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:scrollbars="vertical"
+            android:text="INGREDIENTS:"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+
+            android:textSize="27sp"
+            app:layout_constraintBottom_toTopOf="@+id/Recipe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Level"
+            app:layout_constraintVertical_bias="0.952" />
+
+        <EditText
+            android:id="@+id/Serves"
+            android:layout_width="344dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="340dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:text="Serves:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toTopOf="@+id/Time"
+            app:layout_constraintEnd_toEndOf="@+id/Title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Title"
+            app:layout_constraintTop_toTopOf="@+id/holder"
+            app:layout_constraintVertical_bias="0.296" />
+
+        <EditText
+            android:id="@+id/Time"
+            android:layout_width="344dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="416dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:text="Time:"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toTopOf="@+id/Prep"
+            app:layout_constraintEnd_toEndOf="@+id/Serves"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Serves"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/Meal"
+            android:layout_width="190dp"
+            android:layout_height="49dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:gravity="top|left"
+            android:maxLines="100"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:scrollbars="vertical"
+            android:text="Meal:"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toTopOf="@+id/Level"
+            app:layout_constraintEnd_toEndOf="@+id/Level"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Level"
+            app:layout_constraintTop_toTopOf="@+id/holder"
+            app:layout_constraintVertical_bias="0.9" />
+
+
+        <EditText
+            android:id="@+id/Level"
+            android:layout_width="190dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="152dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:gravity="top|left"
+            android:maxLines="100"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:scrollbars="vertical"
+            android:text="Level:"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="@+id/Title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

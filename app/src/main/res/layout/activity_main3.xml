@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/add_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:context=".MainActivity3">
+
+
+        <TextView
+            android:id="@+id/Heading"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/box1"
+            android:fontFamily="@font/baloo_chettan"
+            android:paddingTop="15dp"
+            android:text="Recipe Name"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/back2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+
+
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/whitecoffee"
+            app:layout_constraintBottom_toTopOf="@+id/mIngredients"
+            app:layout_constraintEnd_toEndOf="@+id/Heading"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mIngredients"
+            app:layout_constraintTop_toTopOf="@id/Heading"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/mMeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/tenali_ramakrishna"
+
+            android:text="Meal:Breakfast"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="@+id/mDifficult"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mDifficult"
+            app:layout_constraintTop_toTopOf="@+id/Heading" />
+
+        <TextView
+            android:id="@+id/mDifficult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:text="Level:Difficult"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="@+id/Heading"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/mMeal" />
+
+        <TextView
+            android:id="@+id/mServes"
+            android:layout_width="93dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:text="Serves:4"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="@+id/mDifficult"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mDifficult"
+            app:layout_constraintTop_toBottomOf="@+id/mDifficult" />
+
+        <TextView
+            android:id="@+id/mTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:text="Time:4hrs"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="@+id/mServes"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mServes"
+            app:layout_constraintTop_toBottomOf="@+id/mServes" />
+
+        <TextView
+            android:id="@+id/mRecipe"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0sp"
+            android:maxLines="300"
+            android:padding="0dp"
+            android:scrollbars="vertical"
+            android:text="Recipe"
+            android:textColor="#292727"
+            android:textSize="27sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/Heading"
+            app:layout_constraintTop_toBottomOf="@+id/mIngredients"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <TextView
+            android:id="@+id/mIngredients"
+            android:layout_width="355dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0sp"
+            android:padding="0dp"
+            android:scrollbars="vertical"
+            android:text="Ingredients"
+            android:textColor="#292727"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="@+id/mRecipe"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/mTime" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="#7E3030"
+            android:clickable="true"
+            android:onClick="btnDelete"
+            app:layout_constraintBottom_toBottomOf="@+id/Heading"
+            app:layout_constraintEnd_toEndOf="@+id/mRecipe"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/mRecipe"
+            app:layout_constraintTop_toBottomOf="@+id/mRecipe"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#7E3030"
+            android:clickable="true"
+            android:onClick="btnUpdate"
+            app:layout_constraintBottom_toBottomOf="@+id/Delete"
+            app:layout_constraintEnd_toStartOf="@+id/Delete"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="@+id/Heading"
+            app:layout_constraintTop_toTopOf="@+id/Delete"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+
+
+        <item>@font/baloo_chettan</item>
+        <item>@font/tenali_ramakrishna</item>
+
+    </array>
+</resources>

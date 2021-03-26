@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+
+    app:cardBackgroundColor="#D3A6A6"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/idIVCourseImage"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+
+            android:src="@drawable/whitecoffee" />
+
+        <TextView
+            android:id="@+id/idTVCourseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/idIVCourseImage"
+            android:maxLines="1"
+            android:text="Recipe Name"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idTVCourseMeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVCourseName"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="-4dp"
+            android:layout_toEndOf="@id/idIVCourseImage"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:text="Meal:"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/idTVCourseDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVCourseMeal"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/idIVCourseImage"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:text="Level:"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/idTVCourseServes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idIVCourseImage"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:paddingLeft="0dp"
+            android:paddingTop="5dp"
+            android:paddingRight="50dp"
+            android:text="Serves"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/idTVCourseTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idIVCourseImage"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="78dp"
+            android:layout_marginTop="0dp"
+
+            android:layout_toRightOf="@id/idTVCourseServes"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:paddingTop="5dp"
+            android:text="Time:"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/idTVCourseIngr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVCourseServes"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:maxLines="1"
+
+            android:text="Ingredients Required"
+
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/idTVCourseRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVCourseIngr"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/tenali_ramakrishna"
+            android:maxLines="2"
+            android:text="Recipe Steps"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
