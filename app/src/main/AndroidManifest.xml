@@ -15,17 +15,17 @@
         android:supportsRtl="true"
         >
 
-        <activity android:name="com.recipe_book.our_recipebook.MainActivity5"
+        <activity android:name="com.recipe_book.our_recipebook.SearchExternalRecipes"
             android:theme="@style/Theme2.MyRecipeBook"/>
-        <activity android:name="com.recipe_book.our_recipebook.MainActivity4"
+        <activity android:name="com.recipe_book.our_recipebook.UpdateRecipe"
             android:theme="@style/Theme.MyRecipeBook"/>
-        <activity android:name="com.recipe_book.our_recipebook.MainActivity3"
+        <activity android:name="com.recipe_book.our_recipebook.Details"
             android:theme="@style/Theme.MyRecipeBook"/>
-        <activity android:name="com.recipe_book.our_recipebook.MainActivity2"
+        <activity android:name="com.recipe_book.our_recipebook.AddRecipe"
             android:theme="@style/Theme.MyRecipeBook" />
         <activity android:name="com.recipe_book.our_recipebook.Recipelist"
             android:theme="@style/Theme.MyRecipeBook"/>
-        <activity android:name="com.recipe_book.our_recipebook.MainActivity"
+        <activity android:name="com.recipe_book.our_recipebook.Home"
             android:theme="@style/Theme.MyRecipeBook" >
         <intent-filter><action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"></category> </intent-filter>

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/add_bg"
-        tools:context=".MainActivity4">
+        tools:context=".UpdateRecipe">
 
 
         <TextView
@@ -46,17 +46,6 @@
             app:layout_constraintTop_toBottomOf="@+id/addimage"
             app:layout_constraintVertical_bias="0.0"
             android:onClick="btnSelectImage"/>
-        <ImageView
-            android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/Heading2"
-            app:layout_constraintEnd_toEndOf="@+id/Heading2"
-            app:layout_constraintHorizontal_bias="0.040"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/Heading2"
-            app:layout_constraintVertical_bias="0.02"
-            android:background="@drawable/ic_baseline_arrow_back_24" />
 
         <ImageView
             android:id="@+id/addimage"

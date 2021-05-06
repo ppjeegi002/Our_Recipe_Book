@@ -17,25 +17,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-public class MainActivity3 extends AppCompatActivity {
+public class Details extends AppCompatActivity {
     TextView Title, Meal, Level, Serves, Time, Recipe, Prep;
     ImageView Rpic;
     String key = "";
     String imgUrl = "";
-    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
-        back = findViewById(R.id.back2);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(MainActivity3.this, Recipelist.class);
-                startActivity(in);
-            }
-        });
+        setContentView(R.layout.details);
+
         Title = findViewById(R.id.Heading);
         Meal = findViewById(R.id.mMeal);
         Level = findViewById(R.id.mDifficult);
@@ -73,7 +65,7 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 reference.child(key).removeValue();
-                Toast.makeText(MainActivity3.this, "Deleted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Details.this, "Deleted", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), Recipelist.class));
                 finish();
             }
@@ -81,7 +73,7 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     public void btnUpdate(View view) {
-        startActivity(new Intent(getApplicationContext(), MainActivity4.class).putExtra("titleKey", Title.getText().toString())
+        startActivity(new Intent(getApplicationContext(), UpdateRecipe.class).putExtra("titleKey", Title.getText().toString())
                 .putExtra("mealKey", Meal.getText().toString()).putExtra("levelKey", Level.getText().toString())
                 .putExtra("servesKey", Serves.getText().toString()).putExtra("timeKey", Time.getText().toString())
                 .putExtra("prepKey", Prep.getText().toString()).putExtra("recipeKey", Recipe.getText().toString())

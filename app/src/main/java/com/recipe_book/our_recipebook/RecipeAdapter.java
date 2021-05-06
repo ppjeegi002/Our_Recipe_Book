@@ -51,7 +51,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
                 recipeViewHolder.mCardView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent= new Intent(mContext,MainActivity3.class);
+                        Intent intent= new Intent(mContext, Details.class);
                         intent.putExtra("Image",myrecipeList.get(recipeViewHolder.getAdapterPosition()).getImage());
                         intent.putExtra("Title",myrecipeList.get(recipeViewHolder.getAdapterPosition()).getName());
                         intent.putExtra("Meal",myrecipeList.get(recipeViewHolder.getAdapterPosition()).getMeal());

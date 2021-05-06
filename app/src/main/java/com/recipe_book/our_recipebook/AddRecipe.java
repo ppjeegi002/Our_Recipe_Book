@@ -33,13 +33,12 @@ import com.google.firebase.storage.UploadTask;
 import java.util.Calendar;
 
 
-public class MainActivity2 extends AppCompatActivity {
+public class AddRecipe extends AppCompatActivity {
     private EditText Title;
     private EditText Type;
     private EditText Prep;
     private EditText Serves;
     private EditText Time;
-    private ImageView back;
     private Button buttonadd;
     private EditText Meal;
     private EditText Difficulty;
@@ -51,16 +50,15 @@ public class MainActivity2 extends AppCompatActivity {
    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.add);
         buttonadd = findViewById(R.id.buttonadd);
        buttonadd.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               ActivityCompat.requestPermissions(MainActivity2.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},REQUEST_CODE_GALLERY);
+               ActivityCompat.requestPermissions(AddRecipe.this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},REQUEST_CODE_GALLERY);
            }
        });
 
-       back = findViewById(R.id.back);
 
         iv = (ImageView)findViewById(R.id.addimage); Title = findViewById(R.id.Title); Type= findViewById(R.id.Recipe); Prep= findViewById(R.id.Prep);Serves= findViewById(R.id.Serves);Time= findViewById(R.id.Time);Meal= findViewById(R.id.Meal);Difficulty= findViewById(R.id.Level);
 
@@ -75,13 +73,6 @@ public class MainActivity2 extends AppCompatActivity {
        });
 
 
-        back.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-              Intent in = new Intent(MainActivity2.this,MainActivity.class);
-              startActivity(in);
-          }
-      });
 
 
        }
@@ -162,14 +153,14 @@ public void uploadRecipe(){
         @Override
         public void onComplete(@NonNull Task<Void> task) {
             if(task.isSuccessful()){
-                Toast.makeText(MainActivity2.this,"Recipe Uploaded",Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddRecipe.this,"Recipe Uploaded",Toast.LENGTH_SHORT).show();
                 finish();
             }
         }
     }).addOnFailureListener(new OnFailureListener() {
         @Override
         public void onFailure(@NonNull Exception e) {
-            Toast.makeText(MainActivity2.this,e.getMessage().toString(),Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddRecipe.this,e.getMessage().toString(),Toast.LENGTH_SHORT).show();
         }
     });
 }}

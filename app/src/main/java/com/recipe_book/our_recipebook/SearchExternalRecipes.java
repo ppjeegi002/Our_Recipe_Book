@@ -8,12 +8,12 @@ import android.webkit.WebView;
 import android.webkit.WebSettings;
 import  android.webkit.WebViewClient;
 
-public class MainActivity5 extends AppCompatActivity {
+public class SearchExternalRecipes extends AppCompatActivity {
 private WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main5);
+        setContentView(R.layout.search_external);
 
         webView = findViewById(R.id.Wv);
         WebSettings webSettings = webView.getSettings();

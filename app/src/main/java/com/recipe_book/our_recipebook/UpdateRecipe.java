@@ -24,7 +24,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class MainActivity4 extends AppCompatActivity {
+public class UpdateRecipe extends AppCompatActivity {
 
     private EditText Title,Type,Prep,Serves,Time,Meal,Difficulty;
     String ImageUrl;Uri uri;
@@ -36,8 +36,8 @@ public class MainActivity4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
-        Toast.makeText(MainActivity4.this,"Please make sure you re-upload the picture",Toast.LENGTH_SHORT).show();
+        setContentView(R.layout.update);
+        Toast.makeText(UpdateRecipe.this,"Please make sure you re-upload the picture",Toast.LENGTH_SHORT).show();
 
         iv = (ImageView)findViewById(R.id.addimage);
         Title = (EditText)findViewById(R.id.Title);
@@ -51,7 +51,7 @@ public class MainActivity4 extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null){
 
-            Glide.with(MainActivity4.this)
+            Glide.with(UpdateRecipe.this)
                     .load(bundle.getString("oldimageUrl"))
                     .into(iv);
             Title.setText(bundle.getString("titleKey"));
@@ -111,7 +111,10 @@ public class MainActivity4 extends AppCompatActivity {
                 Uri urlImage = uriTask.getResult();
                 ImageUrl = urlImage.toString();
                 uploadRecipe();
+                Intent in = new Intent(UpdateRecipe.this,Recipelist.class);
+                startActivity(in);
                 pd.dismiss();
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -130,7 +133,7 @@ public class MainActivity4 extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 StorageReference storageReferenceNew  = FirebaseStorage.getInstance().getReferenceFromUrl(oldImageUrl);
                 storageReferenceNew.delete();
-                Toast.makeText(MainActivity4.this, "Data Updated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(UpdateRecipe.this, "Data Updated", Toast.LENGTH_SHORT).show();
             }
         });
 

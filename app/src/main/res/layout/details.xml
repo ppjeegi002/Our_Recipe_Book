@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        tools:context=".MainActivity3">
+        tools:context=".Details">
 
 
         <TextView
@@ -32,19 +32,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
-
-        <ImageView
-            android:id="@+id/back2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.041"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -166,7 +153,7 @@
             android:clickable="true"
             android:onClick="btnDelete"
             app:layout_constraintBottom_toBottomOf="@+id/Heading"
-            app:layout_constraintEnd_toEndOf="@+id/mRecipe"
+            app:layout_constraintEnd_toEndOf="@+id/Heading"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/mRecipe"
             app:layout_constraintTop_toBottomOf="@+id/mRecipe"
@@ -182,11 +169,11 @@
             android:onClick="btnUpdate"
             app:layout_constraintBottom_toBottomOf="@+id/Delete"
             app:layout_constraintEnd_toStartOf="@+id/Delete"
-            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/Heading"
             app:layout_constraintTop_toTopOf="@+id/Delete"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@android:drawable/ic_menu_edit" />
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
